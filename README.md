@@ -1,6 +1,8 @@
-# Letmeask
+# ![alt text](https://github.com/JoaoVitorOli/letmeask/blob/master/letmeask.svg) Letmeask 
 
 Este é um projeto feito na Next Level Week Together (sexta edição).
+
+git
 
 ## O usuário pode: 
 - Ver um layout responsivo;
@@ -34,10 +36,13 @@ Fotos:
 
 ```
 git clone https://github.com/JoaoVitorOli/letmeask.git
-
+```
+```
 cd letmeask
-
+```
+```
 yarn install
-
+```
+```
 yarn start
 ```
