@@ -29,3 +29,15 @@ E algumas outras bibliotecas...
 Link
 
 Fotos:
+
+## Instalação:
+
+```
+git clone https://github.com/JoaoVitorOli/letmeask.git
+
+cd letmeask
+
+yarn install
+
+yarn start
+```
