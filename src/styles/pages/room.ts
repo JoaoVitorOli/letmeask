@@ -30,6 +30,21 @@ export const PageRoom = styled.div`
     }
   }
 
+  .toast-signed {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 42px;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    span {
+      color: ${(props) => props.theme.color.text};
+    }
+  }
+
   .div-mobile-ham {
     > div:nth-child(1) {
       z-index: 100;
@@ -63,6 +78,24 @@ export const PageRoom = styled.div`
     max-width: 800px;
     padding: 0 30px;
     margin: auto;
+
+    .no-questions {
+      display: flex;
+      margin: 4rem auto 0 auto;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      text-align: center;
+      color: ${(props) => props.theme.color.text};
+
+      img {
+        margin-bottom: 0.75rem;
+      }
+
+      h2 {
+        margin-bottom: 0.75rem;
+      }
+    }
 
     .room-title{
       margin: 32px 0 24px;
@@ -164,6 +197,20 @@ export const PageRoom = styled.div`
     }
 
     main {
+      .no-questions {
+        img {
+          width: 100px;
+        }
+
+        h2 {
+          font-size: 21px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+
       .room-title {
         flex-direction: column;
         align-items: flex-start !important;
@@ -188,6 +235,14 @@ export const PageRoom = styled.div`
         > button {
           align-self: flex-end !important;
         }
+      }
+    }
+  }
+
+  @media (max-width: 340px) {
+    .no-questions {
+      h2 {
+        font-size: 16px !important;
       }
     }
   }

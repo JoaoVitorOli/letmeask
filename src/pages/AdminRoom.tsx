@@ -13,6 +13,7 @@ import deleteImg from "../assets/images/delete.svg";
 import logoDarkImg from "../assets/images/logo-dark.svg";
 import checkImg from "../assets/images/check.svg"
 import anwerImg from "../assets/images/answer.svg"
+import noQuestionsImg from "../assets/images/no-questions.svg";
 
 import { PageRoom } from "../styles/pages/room";
 
@@ -186,7 +187,47 @@ export function AdminRoom() {
         </div>
 
         <div className="question-list">
-          {questions.map((question) => (
+        {questions.length === 0 ? (
+            <div className="no-questions">
+              <img src={noQuestionsImg} alt="Nenhuma pergunta" />
+              <h2>Nenhuma pergunta por aqui...</h2>
+              <span>Envie o código desta sala para seus amigos e comece a responder perguntas!</span>
+            </div>
+          ) : (
+            questions.map((question) => (
+              <Question
+                key={question.id}
+                content={question.content}
+                author={question.author}
+                isAnswered={question.isAnswered}
+                isHighLighted={question.isHighLighted}
+              >
+                {!question.isAnswered && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => handleCheckQuestionAsAnswered(question.id)}
+                    >
+                      <img src={checkImg} alt="Checar pergunta" /> 
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleHighLightQuestion(question.id)}
+                    >
+                      <img src={anwerImg} alt="Responder pergunta" />
+                    </button>
+                  </>
+                )}
+                <button
+                  type="button"
+                  onClick={() => openModalQuestion(question.id)}
+                >
+                  <img src={deleteImg} alt="Remover pergunta" /> 
+                </button>
+              </Question>
+            ))
+          )}
+          {/* {questions.map((question) => (
             <Question
               key={question.id}
               content={question.content}
@@ -217,7 +258,7 @@ export function AdminRoom() {
                 <img src={deleteImg} alt="Remover pergunta" /> 
               </button>
             </Question>
-          ))}
+          ))} */}
         </div>
       </main>
     </PageRoom>

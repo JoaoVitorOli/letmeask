@@ -40,7 +40,7 @@ export function NewRoom() {
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
 
-    if (newRoom.trim() === " ") {
+    if (newRoom.trim() === " " || !newRoom) {
       return;
     }
 
@@ -59,7 +59,7 @@ export function NewRoom() {
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
       <main>
         <ThemeSwitch /> 
@@ -68,10 +68,18 @@ export function NewRoom() {
         </div>
         
         <div className="main-content">
-          <img
-            src={title === "light" || width < 880 ? logoDarkImg : logoImg}
-            alt="Letmeask"
-          />
+        {width <= 880 && (
+            <img
+              src={logoDarkImg}
+              alt="Letmeask"
+            />
+          )}
+          {width > 880 && (
+            <img
+              src={title === "dark" ? logoDarkImg : logoImg}
+              alt="Letmeask"
+            />
+          )}
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input
