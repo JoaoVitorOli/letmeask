@@ -1,10 +1,13 @@
-# ![logo](https://github.com/JoaoVitorOli/letmeask/blob/master/letmeask.svg) Letmeask 
+
+<img src="https://github.com/JoaoVitorOli/letmeask/blob/master/letmeask.svg" alt="Let Me Ask logo"> 
+
+# Let me ask 
 
 Este é um projeto feito na Next Level Week Together (sexta edição).
 
 ![Gif](https://github.com/JoaoVitorOli/letmeask/blob/master/git-pre-view.gif)
 
-## O usuário pode: 
+## ⚡️ O usuário pode: 
 - Ver um layout responsivo;
 - Trocar entre tema escuro e claro;
 - Fazer autenticação com a conta do Google ou Github;
@@ -16,7 +19,7 @@ Este é um projeto feito na Next Level Week Together (sexta edição).
 - Marcar pergunta com respondida (caso for o dono da sala);
 - Encerrar uma sala (caso for o dono da sala)
 
-## Tecnologias
+## 💻 Tecnologias
 
 - ReactJs;
 - Typescript;
@@ -28,13 +31,15 @@ Este é um projeto feito na Next Level Week Together (sexta edição).
 
 E algumas outras bibliotecas...
 
-## Veja uma demonstração: 
+## 🔥 Veja uma demonstração: 
 <a href="https://letmeask-92952.web.app">Demo</a>.
 
 ![foto mobile](https://github.com/JoaoVitorOli/letmeask/blob/master/pre-view-mobile.png)
 ![foto desktop](https://github.com/JoaoVitorOli/letmeask/blob/master/pre-view-desktop.png)
 
 ## Instalação:
+
+Você precisará ter o [Node.js](https://nodejs.org/en/download/) e o [Yarn](https://yarnpkg.com/) instalado em seu computador.
 
 ```
 git clone https://github.com/JoaoVitorOli/letmeask.git
