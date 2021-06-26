@@ -180,6 +180,27 @@ export const PageRoom = styled.div`
     }
   }
 
+  @media (max-width: 511px) {
+    .form-footer {
+      flex-direction: column;
+      align-items: flex-start !important;
+
+      > span {
+        margin-bottom: 1rem;
+
+        button {
+          background: transparent;
+          border: 0;
+          color: #835afd;
+          text-decoration: underline;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   @media (max-width: 425px) {
     .Menu-ham {
       width: 100vw;
